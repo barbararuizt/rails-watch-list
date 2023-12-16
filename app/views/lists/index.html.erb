@@ -1,0 +1,21 @@
+
+  <!-- Card with Title, Background Picture, and Button -->
+<div class="header-banner"> 
+  <div id="header-title">   <!-- move upwards -->
+    <h1>Movie Lists 2023</h1>
+    <p>The films I watched in 2023.</p>
+  </div>
+  <%= link_to "Add List", new_list_path, class: "btn btn-success"%>
+</div>
+
+<div class="container mt-5">
+
+  <!-- List of Cards in Rows of 3 -->
+  <div class="row mt-4">
+    <% @lists.each do |list| %>
+      <%= link_to list_path(list), class: "col-md-2 card p-5 m-3 justify-content-center align-content-center d-flex text-decoration-none" do %>
+        <h3><%= list.name %></h3>
+      <% end %>
+    <% end %>
+  </div>
+</div>
