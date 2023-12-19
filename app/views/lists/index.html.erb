@@ -1,21 +1,31 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+</style>
 
   <!-- Card with Title, Background Picture, and Button -->
 <div class="header-banner"> 
-  <div id="header-title">   <!-- move upwards -->
-    <h1>Movie Lists 2023</h1>
-    <p>The films I watched in 2023.</p>
+  <div class="col-md-6 mx-5">   <!-- move upwards -->
+    <h1 class="row">Movie Lists ~ 2023-2024</h1>
+    <p class="row">The films I want to watch, registered from 2023 to 2024. bla baldja shjsgdkjha djvanbxb jbcbcdh </p>
+    <%= link_to "Add List", new_list_path, class: "row btn btn-success"%>
   </div>
-  <%= link_to "Add List", new_list_path, class: "btn btn-success"%>
 </div>
 
 <div class="container mt-5">
 
   <!-- List of Cards in Rows of 3 -->
-  <div class="row mt-4">
+  <div class="row mt-5 d-flex justify-content-center">
     <% @lists.each do |list| %>
-      <%= link_to list_path(list), class: "col-md-2 card p-5 m-3 justify-content-center align-content-center d-flex text-decoration-none" do %>
-        <h3><%= list.name %></h3>
-      <% end %>
+      <div class="col-md-4">
+        <%= link_to list_path(list), class: "card p-5 m-3 justify-content-center align-content-center d-flex text-decoration-none" do %>
+          <h3 class="text-center"><%= list.name %></h3>
+        <% end %>
+      </div>
+      <div class="col-md-5 p-4">
+        <h5>Title</h5>
+        <p>Hello, this is the description of the list. bla bla bla bla bal abajkka</p>
+        <p>10,000 Movies</p>
+      </div>
     <% end %>
   </div>
 </div>

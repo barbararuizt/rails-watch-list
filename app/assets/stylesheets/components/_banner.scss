@@ -1,24 +1,36 @@
 body {
-  background-color: rgb(237, 231, 231);
+  background-color: #18191d;
   background-size: cover;
   background-position: center;
-  color: #fff; /* Set text color to white for better visibility on the background */
+  color: #f4d58d; /* Set text color to white for better visibility on the background */
+}
+
+.btn-success {
+  background-color: transparent;
+  border-color: #6aa18a;
+  color: #6aa18a;
+  padding: 5px 30px;
 }
 
 .header-banner {
-  background-image: url('https://images.unsplash.com/photo-1595769816263-9b910be24d5f?q=80&w=1179&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Add your header background image path */
+  background-image: url('redombre.jpg'); /* Add your header background image path */
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
-  text-align: center;
-  color: #fff;
+  padding: 180px 0;
+  padding-left: 200px;
+  color: #f4d58d;
 
   h1 {
     font-size: 3em;
+    font-family: 'DM Serif Display', serif;
   }
 
   p {
     font-size: 1.2em;
     margin-bottom: 30px;
   }
+}
+
+.card {
+  background-color: #6aa18a;
 }
